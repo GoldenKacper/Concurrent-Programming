@@ -8,5 +8,11 @@ namespace HelloWorldTests
         { 
             Assert.IsTrue(true);
         }
+
+        [TestMethod]
+        public void HelloWorldCalculationTests()
+        {
+            Assert.AreEqual(actual: 2, expected: 2);
+        }
     }
 }
