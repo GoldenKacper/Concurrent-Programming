@@ -5,3 +5,6 @@
 *.csproj
 *.user
 *.sln
+*.sqlite
+*.json
+*/packages
