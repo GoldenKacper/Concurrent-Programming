@@ -1,10 +1,5 @@
-*/bin
-*/obj
-*/.vs
-*.resx
-*.csproj
-*.user
-
-*.sqlite
-*.json
-*/packages
+.vs/*
+obj
+App.xaml*
+AssemblyInfo.cs
+WpfApp1(etap0).*
