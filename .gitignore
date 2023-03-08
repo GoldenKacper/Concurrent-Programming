@@ -1,5 +1,3 @@
 .vs/*
+packages/*
 obj
-App.xaml*
-AssemblyInfo.cs
-WpfApp1(etap0).*
