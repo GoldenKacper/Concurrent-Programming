@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Logic;
+using Data;
+using Presentation.Model;
+using Presentation.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace Presentation
 {
@@ -20,9 +25,20 @@ namespace Presentation
     /// </summary>
     public partial class MainWindow : Window
     {
+        IBallsManager _ballsManager;
+        ILogic _logic;
+        IModel _model;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            _ballsManager = new BallsManager();
+            _logic = new Logic.Logic(_ballsManager);
+            _model = new Model.Model(_logic);
+
+
+            DataContext = new MainViewModel(_model);
         }
     }
 }

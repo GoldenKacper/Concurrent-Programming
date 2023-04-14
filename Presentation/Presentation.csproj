@@ -8,8 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Model\" />
-    <Folder Include="ViewModel\" />
+    <ProjectReference Include="..\Logic\Logic.csproj" />
   </ItemGroup>
 
 </Project>

@@ -6,12 +6,31 @@
         xmlns:local="clr-namespace:Presentation"
         mc:Ignorable="d"
         ResizeMode="CanMinimize"
-        Title="Concurrent Programming  |  KJ &amp; AK Presents" Height="600" Width="1200">
+        Title="Concurrent Programming  |  KJ &amp; AK Presents" Height="600" Width="1200" Background="White">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100" />
             <RowDefinition/>
         </Grid.RowDefinitions>
-        
+
+        <Grid Grid.Row="0" Background="#FF676767" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border BorderBrush="Black" BorderThickness="5,5,5,0" Grid.ColumnSpan="5" Grid.Row="0">
+            </Border>
+            <TextBox TextWrapping="Wrap" Text="{Binding BallsNumber}" Grid.Row="0" Grid.Column="0" Margin="15,15,5,15" FontFamily="Arial" FontSize="15" TextAlignment="Center" Padding="0,20,0,0" Height="60"/>
+            <Button Command="{Binding GenerateBallsCommand}" CommandParameter="{Binding ElementName=GameBoard}"  Content="Generate" Margin="30,20,30,20" Grid.Column="1" Width="140" Height="60" FontFamily="Arial" FontSize="15" FontWeight="Bold" Background="#FF2F2F2F" Foreground="#FFE6E6E6"/>
+            <Label Grid.Column="2" Content="Balls Counter:" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="20" FontFamily="Arial" FontStyle="Italic"/>
+            <Label Grid.Column="3" Content="{Binding BallsCounter}" FontSize="30" FontFamily="Arial" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </Grid>
+
+        <Border BorderBrush="{Binding BorderColorDuringGame}" BorderThickness="5,5,5,5" Grid.Row="1">
+            <Canvas x:Name="GameBoard" Background="WhiteSmoke" Focusable="True"/>
+        </Border>
     </Grid>
 </Window>

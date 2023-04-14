@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Data
 {
-    internal class Ball : IBall
+    public class Ball : IBall
     {
         private int _X;
         private int _Y;
