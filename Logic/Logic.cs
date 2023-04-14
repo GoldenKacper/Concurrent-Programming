@@ -44,6 +44,9 @@ namespace Logic
 
             while (true)
             {
+                // TODO fix if condition
+
+
                 //if (x > _ballRadius && x < _height - _ballRadius && y > _ballRadius && y < _width - _ballRadius)
                 //{
                 //    _ballsManager.GetBall(index).X = 400;
