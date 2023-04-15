@@ -79,7 +79,7 @@ namespace Logic
             Random random = new Random();
             for (int i = 0; i < _ballsNumber; i++)
             {
-                _ballsManager.CreateNewBall(random.Next(1190 - 63) + _ballRadius, random.Next(474 - 70) + _ballRadius, _ballRadius);
+                _ballsManager.CreateNewBall(random.Next(1127) + _ballRadius, random.Next(404) + _ballRadius, _ballRadius);
                 //_ballsManager.CreateNewBall(1190-50, 474-50, _ballRadius); // TODO change to random value
                 //_Dane.CreateNewBall(random.Next(_length - 2 * _radius) + _radius, random.Next(_width - 2 * _radius) + _radius, _radius);
                 //_directions.Add(random.Next(360));
