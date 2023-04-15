@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "TestProject/1.0.0": {
         "dependencies": {
+          "Data": "1.0.0",
+          "Logic": "1.0.0",
           "MSTest.TestAdapter": "2.2.10",
           "MSTest.TestFramework": "2.2.10",
           "Microsoft.NET.Test.Sdk": "17.3.2",
@@ -1127,6 +1129,19 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "Data/1.0.0": {
+        "runtime": {
+          "Data.dll": {}
+        }
+      },
+      "Logic/1.0.0": {
+        "dependencies": {
+          "Data": "1.0.0"
+        },
+        "runtime": {
+          "Logic.dll": {}
+        }
+      },
       "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions/14.0.0.0": {
         "runtime": {
           "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll": {
@@ -1807,6 +1822,16 @@
       "sha512": "sha512-lJ8AxvkX7GQxpC6GFCeBj8ThYVyQczx2+f/cWHJU8tjS7YfI6Cv6bon70jVEgs2CiFbmmM8b9j1oZVx0dSI2Ww==",
       "path": "system.xml.xmldocument/4.3.0",
       "hashPath": "system.xml.xmldocument.4.3.0.nupkg.sha512"
+    },
+    "Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Logic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions/14.0.0.0": {
       "type": "reference",
