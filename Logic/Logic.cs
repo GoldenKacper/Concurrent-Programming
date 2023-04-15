@@ -39,25 +39,32 @@ namespace Logic
             //TODO rebuild
 
             int index = (int)obj;
-            int x = 10;
-            int y = 10;
 
             while (true)
             {
                 // TODO fix if condition
 
 
-                //if (x > _ballRadius && x < _height - _ballRadius && y > _ballRadius && y < _width - _ballRadius)
-                //{
-                //    _ballsManager.GetBall(index).X = 400;
-                //    _ballsManager.GetBall(index).Y = 400;
-                //    Thread.Sleep(1);
-                //}
-                //else
-                //{ break; }
+                //if (x > _ballRadius && x < 1190-31 && y > _ballRadius && y < 474-35)
+                //if (_ballsManager.GetBall(index).X < 1152 && _ballsManager.GetBall(index).X > 25 && _ballsManager.GetBall(index).Y < 428 && _ballsManager.GetBall(index).Y > 25)
 
-                _ballsManager.GetBall(index).X = 400;
-                _ballsManager.GetBall(index).Y = 400;
+                Random rng = new Random();
+                int xDirection = rng.Next(-1, 2);
+                int yDirection = rng.Next(-1, 2);
+
+
+                for (int i = 0; i < 25; i++)
+                {
+                    _ballsManager.GetBall(index).X += xDirection;
+                    _ballsManager.GetBall(index).Y += yDirection;
+                    Thread.Sleep(25);
+                    if (_ballsManager.GetBall(index).X > 1152 || _ballsManager.GetBall(index).X < 25 || _ballsManager.GetBall(index).Y > 428 || _ballsManager.GetBall(index).Y < 25)
+                        break;
+                }
+                if (_ballsManager.GetBall(index).X > 1152 || _ballsManager.GetBall(index).X < 25 || _ballsManager.GetBall(index).Y > 428 || _ballsManager.GetBall(index).Y < 25)
+                    break;
+
+
                 Thread.Sleep(1);
             }
 
@@ -72,8 +79,8 @@ namespace Logic
             Random random = new Random();
             for (int i = 0; i < _ballsNumber; i++)
             {
-                //_ballsManager.CreateNewBall(random.Next(_height - 2 * _ballRadius) + _ballRadius, random.Next(_width - 2 * _ballRadius) + _ballRadius, _ballRadius);
-                _ballsManager.CreateNewBall(100, 100, 25); // TODO change to random value
+                _ballsManager.CreateNewBall(random.Next(1190 - 63) + _ballRadius, random.Next(474 - 70) + _ballRadius, _ballRadius);
+                //_ballsManager.CreateNewBall(1190-50, 474-50, _ballRadius); // TODO change to random value
                 //_Dane.CreateNewBall(random.Next(_length - 2 * _radius) + _radius, random.Next(_width - 2 * _radius) + _radius, _radius);
                 //_directions.Add(random.Next(360));
                 _threads.Add(new Thread(MoveBall));
