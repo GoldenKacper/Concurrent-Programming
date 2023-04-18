@@ -39,6 +39,9 @@ namespace Logic
             //TODO rebuild
 
             int index = (int)obj;
+            Random rng = new Random();
+            int xDirection;
+            int yDirection;
 
             while (true)
             {
@@ -48,9 +51,9 @@ namespace Logic
                 //if (x > _ballRadius && x < 1190-31 && y > _ballRadius && y < 474-35)
                 //if (_ballsManager.GetBall(index).X < 1152 && _ballsManager.GetBall(index).X > 25 && _ballsManager.GetBall(index).Y < 428 && _ballsManager.GetBall(index).Y > 25)
 
-                Random rng = new Random();
-                int xDirection = rng.Next(-1, 2);
-                int yDirection = rng.Next(-1, 2);
+                
+                xDirection = rng.Next(-1, 2);
+                yDirection = rng.Next(-1, 2);
 
 
                 for (int i = 0; i < 25; i++)
