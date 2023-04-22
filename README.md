@@ -76,7 +76,7 @@ git clone https://github.com/GoldenKacper/Concurrent-Programming.git
  Type this command in CMD in the folder where you have cloned the repo. 
  
  ```sh
-cd "Concurrent-Programming\Presentation\bin\Debug\net6.0-windows"
+cd Concurrent-Programming\Presentation\bin\Debug\net6.0-windows
 ```
 
 3. Run Presentation.exe file
