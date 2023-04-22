@@ -5,6 +5,9 @@
     Bouncing balls!
   <br/>
   <br/>
+  <a href="https://github.com/GoldenKacper/Concurrent-Programming"><strong>Explore the docs »</strong></a>
+  <br/>
+  <br/>
   <a href="https://raw.githubusercontent.com/GoldenKacper/Concurrent-Programming/main/videos/tutorial.mp4">View short tutorial</a>
   </p>
 </p> 
