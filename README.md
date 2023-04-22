@@ -5,7 +5,7 @@
     Bouncing balls!
   <br/>
   <br/>
-  <a href="https://github.com//Conccu">View short film</a>
+  <a href="https://github.com/GoldenKacper/Concurrent-Programming/blob/main/videos/tutorial.mp4">View short tutorial</a>
   </p>
 </p> 
 
