@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center">Concurrent programming</h1>
   
-  <a>Warning: The project is still in progress and will be updated in the near future</a>
+  <a><strong>Warning: The project is still in progress and will be updated in the near future</strong></a>
   
   <p align="center"><img src="images/image_2.png" alt="Logo" width="100" height="100"></p>
   
