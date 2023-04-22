@@ -9,6 +9,8 @@
   <br/>
   <br/>
   <a href="https://raw.githubusercontent.com/GoldenKacper/Concurrent-Programming/main/videos/tutorial.mp4">View short tutorial</a>
+  .
+  <a href="https://github.com/GoldenKacper/Concurrent-Programming/tree/main/featureRequest">Feature Requests</a>
   </p>
 </p> 
 
