@@ -105,7 +105,7 @@ Contributions are what make the open source community such an amazing place to b
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/ShaanCoding/ReadME-Generator/blob/main/LICENSE.md) for more information.
+See [LICENSE](https://creativecommons.org/publicdomain/zero/1.0/legalcode.pl) for more information.
 
 ## Working Group (Authors)
 
@@ -116,6 +116,5 @@ Distributed under the MIT License. See [LICENSE](https://github.com/ShaanCoding/
 
 ## Acknowledgements
 
-* [ShaanCoding](https://github.com/ShaanCoding/)
-* [Othneil Drew](https://github.com/othneildrew/Best-README-Template)
-* [ImgShields](https://shields.io/)
+* [GithubProject](https://github.com/mpostol/TP)
+* [Wiki](https://en.wikipedia.org/wiki/Elastic_collision)
