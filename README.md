@@ -5,7 +5,7 @@
     Bouncing balls!
   <br/>
   <br/>
-  <a href="https://github.com/GoldenKacper/Concurrent-Programming/blob/main/videos/tutorial.mp4">View short tutorial</a>
+  <a href="https://raw.githubusercontent.com/GoldenKacper/Concurrent-Programming/main/videos/tutorial.mp4">View short tutorial</a>
   </p>
 </p> 
 
@@ -83,9 +83,9 @@ const API_KEY = 'ENTER YOUR API';
 
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+If you already have a project prepared, we refer you to the quick guide
+<a href="https://raw.githubusercontent.com/GoldenKacper/Concurrent-Programming/main/videos/tutorial.mp4">View short tutorial</a>
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
