@@ -1,9 +1,13 @@
 <br/>
 <p align="center">
   <h1 align="center">Concurrent programming</h1>
-</p>
-
-![Downloads](https://img.shields.io/github/downloads/ShaanCoding/ReadME-Generator/total) ![Contributors](https://img.shields.io/github/contributors/ShaanCoding/ReadME-Generator?color=dark-green) ![Issues](https://img.shields.io/github/issues/ShaanCoding/ReadME-Generator) ![License](https://img.shields.io/github/license/ShaanCoding/ReadME-Generator) 
+  <p align="center">
+    Bouncing balls!
+  <br/>
+  <br/>
+  <a href="https://github.com//Conccu">View short film</a>
+  </p>
+</p> 
 
 ## Table Of Contents
 
@@ -16,28 +20,29 @@
 * [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [License](#license)
-* [Authors](#authors)
+* [Authors](#working-group-authors)
 * [Acknowledgements](#acknowledgements)
 
 ## About The Project
 
-![Screen Shot](images/screenshot.png)
+![Screen Shot](images/image_1.png)
 
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
+Our task was to create a program of balls moving on the screen in C#, using asynchronous and concurrent programming techniques.
+The project is that the user selects the number of balls to generate and presses the button, then the balls are generated in random places and their task is to move and bounce in a realistic way from the barriers and themselves.
 
 Here's why:
 
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
+* We wanted to learn more and test the concurrency programming ourselves.
+* Using the simple idea of bouncing balls to practice programming, but in an interesting and new way for us.
+* Watching the balls bounce off each other is really satisfying: try it for yourself ;-)
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
+Despite such a simple idea, it might seem that the project will be trivial, however it turned out to be an interesting challenge
 
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
+A list of commonly used resources that we find helpful are listed in the acknowledgements.
 
 ## Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+The idea was to make a program in C# using the MVVM pattern to connect the data with the view. Finally, our project is divided into 3 layers: data, logic and presentation. And the presentation layer itself is made according to the MVVM pattern and is divided into: model, viewmodel, view. The next step was to implement multi-threading. We wanted each ball to be a separate thread and move independently. We used the critical section for data and logic to avoid various problems. we implement reactive and interactive user-computer interaction. Our graphical user interface (GUI) is made using XAML. In addition also Dependency Injections and asynchronous programming is used.
 
 ## Getting Started
 
@@ -84,42 +89,37 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
-See the [open issues](https://github.com/ShaanCoding/ReadME-Generator/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/GoldenKacper/Concurrent-Programming/issues) for a list of proposed features (and known issues).
 
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/ShaanCoding/ReadME-Generator/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
+* If you have suggestions for adding or removing projects, feel free to [open an issue](https://github.com/GoldenKacper/Concurrent-Programming/issues/new) to discuss it, or directly create a pull request after you edit the *README.md* file with necessary changes.
 * Please make sure you check your spelling and grammar.
 * Create individual PR for each suggestion.
-* Please also read through the [Code Of Conduct](https://github.com/ShaanCoding/ReadME-Generator/blob/main/CODE_OF_CONDUCT.md) before posting your first idea as well.
+
+We can implement any suggestions only after we finish the project at the university, i.e. from the summer of 2023
 
 ### Creating A Pull Request
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch (`git checkout -b suggestions`)
+3. Commit your Changes (`git commit -m 'Add some exampleSuggestion`)
+4. Push to the Branch (`git push origin suggestions`)
 5. Open a Pull Request
 
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/ShaanCoding/ReadME-Generator/blob/main/LICENSE.md) for more information.
+See [LICENSE](https://github.com/GoldenKacper/Concurrent-Programming/blob/main/LICENSE.md) for more information.
 
-## Authors
-
-* **Shaan Khan** - *Comp Sci Student* - [Shaan Khan](https://github.com/ShaanCoding/) - *Built ReadME Template*
-
-## Acknowledgements
-
-* [ShaanCoding](https://github.com/ShaanCoding/)
-* [Othneil Drew](https://github.com/othneildrew/Best-README-Template)
-* [ImgShields](https://shields.io/)
-
-
-## Working Group
+## Working Group (Authors)
 
 | Name Surname (initials) | GUID                                     |
 | ----------------------- | ---------------------------------------- |
 | Kacper Jagodziński      | `{44cde337-333b-4960-bd5c-8a18c9b5b97b}` |
 | Adam Kruszyński         | `{cb2cfa5a-5396-4921-be82-b7c9f2beec61}` |
+
+## Acknowledgements
+
+* [GithubProject](https://github.com/mpostol/TP)
+* [Wiki](https://en.wikipedia.org/wiki/Elastic_collision)
