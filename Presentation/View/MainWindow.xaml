@@ -30,7 +30,7 @@
         </Grid>
 
         <Border BorderBrush="{Binding BorderColorDuringGame}" BorderThickness="5,5,5,5" Grid.Row="1">
-            <Canvas x:Name="GameBoard" Background="WhiteSmoke" Focusable="True"/>
+            <Canvas x:Name="GameBoard" Background="WhiteSmoke" Focusable="True" Width="1190" Height="474"/>
         </Border>
     </Grid>
 </Window>

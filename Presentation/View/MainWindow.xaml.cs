@@ -31,7 +31,7 @@ namespace Presentation
 
         public MainWindow()
         {
-            InitializeComponent();
+            //InitializeComponent();
 
             _ballsManager = new BallsManager();
             _logic = new Logic.Logic(_ballsManager);
@@ -39,6 +39,12 @@ namespace Presentation
 
 
             DataContext = new MainViewModel(_model);
+        }
+
+        private void Close_Window(object sender, RoutedEventArgs e)
+        {
+            (DataContext as MainViewModel).StopBalls();
+            Application.Current.Shutdown();
         }
     }
 }

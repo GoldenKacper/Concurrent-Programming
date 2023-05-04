@@ -24,7 +24,7 @@ namespace Data
             return _balls[index];
         }
 
-        public int GetBallCount()
+        public int GetBallsCount()
         {
             return _balls.Count;
         }

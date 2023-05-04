@@ -11,5 +11,6 @@ namespace Data
         int X { get; set; }
         int Y { get; set; }
         int Radius { get; }
+        int Weight { get; }
     }
 }

@@ -11,6 +11,7 @@ namespace Data
         private int _X;
         private int _Y;
         private readonly int _Radius;
+        private readonly int _Weight;
 
         public Ball(int x, int y, int radius)
         {
@@ -47,5 +48,7 @@ namespace Data
             } 
         }
         public int Radius { get => _Radius; }
+
+        public int Weight => _Weight;
     }
 }

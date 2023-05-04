@@ -28,10 +28,10 @@ namespace Presentation.Model
             return _location[index];
         }
 
-        public void InitializeModel(int bordWidth, int bordHeight, int ballsNumber, int ballsRadius)
+        public void InitializeModel(int bordWidth, int bordHeight, int ballsNumber, int ballsRadius, int ballsSpeed)
         {
             _ballsNumber = ballsNumber;
-            _logic.Initialize(bordWidth, bordHeight, ballsNumber, ballsRadius);
+            _logic.Initialize(bordWidth, bordHeight, ballsNumber, ballsRadius, ballsSpeed);
             for (int i = 0; i < _ballsNumber; i++)
             {
                 _location.Add(_logic.GetLocation(i));
@@ -44,6 +44,11 @@ namespace Presentation.Model
             {
                 _location[i] = _logic.GetLocation(i);
             }
+        }
+
+        public void StopLogic()
+        {
+            _logic.Stop();
         }
     }
 }

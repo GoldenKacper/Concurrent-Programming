@@ -17,7 +17,7 @@ namespace Presentation.ViewModel
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        private int _movingSpeed = 8;
+        private int _movingSpeed = 5;
         private string _ballsNumber;
         private string _ballsCounter;
         private string _borderColorDuringGame;
@@ -55,7 +55,7 @@ namespace Presentation.ViewModel
             BorderColorDuringGame = "Red";
             BallsCounter = BallsNumber;
 
-            _model.InitializeModel((int)_canvas.Width, (int)_canvas.Height, ballsNumber, _tempBallRadius);
+            _model.InitializeModel((int)_canvas.Width, (int)_canvas.Height, ballsNumber, _tempBallRadius, _movingSpeed);
             for (int i = 0; i < ballsNumber; i++)
             {
                 Random random = new Random();
@@ -131,6 +131,11 @@ namespace Presentation.ViewModel
                 Canvas.SetLeft(_canvas.Children[i], _model.GetLocation(i).X - _tempBallRadius);
                 Canvas.SetTop(_canvas.Children[i], _model.GetLocation(i).Y - _tempBallRadius);
             }
+        }
+
+        public void StopBalls()
+        {
+            _model.StopLogic();
         }
     }
 }

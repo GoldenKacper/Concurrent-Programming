@@ -9,8 +9,10 @@ namespace Presentation.Model
 {
     public interface IModel
     {
-        void InitializeModel(int bordWidth, int bordHeight, int ballsNumber, int ballsRadius);
+        void InitializeModel(int bordWidth, int bordHeight, int ballsNumber, int ballsRadius, int ballsSpeed);
         ILocation GetLocation(int index);
         void UpdateLocation();
+
+        void StopLogic();
     }
 }

@@ -8,7 +8,10 @@ namespace Logic
 {
     public interface ILogic // Logic API
     {
-        void Initialize(int width, int height, int ballsNumber, int ballsRadius = 25);
+        void Initialize(int width, int height, int ballsNumber, int ballsRadius = 25, int ballsWeight = 10, int ballsSpeed = 5);
         ILocation GetLocation(int index);
+
+        void Start();
+        void Stop();
     }
 }
