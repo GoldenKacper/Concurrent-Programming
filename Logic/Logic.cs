@@ -139,6 +139,17 @@ namespace Logic
             return new Location { X = _ballsManager.GetBall(index).X, Y = _ballsManager.GetBall(index).Y };
         }
 
+        public int GetDirectionValue(int index)
+        {
+            return _directions[index];
+        }
+
+
+        public void SetDirectionValue(int i, int value)
+        {
+            _directions[i] = value;
+        }
+
         public void Initialize(int width, int height, int ballsNumber, int ballsRadius = 25, int ballsWeight = 10, int ballsSpeed = 5)
         {
             _ballsNumber = ballsNumber;
@@ -182,6 +193,28 @@ namespace Logic
             return -1; // not found
         }
 
+        public int MockFindPotentialCollision(int index)
+        {
+            IBall ball = _ballsManager.GetBall(index);
+            int ballX = ball.X;
+            int ballY = ball.Y;
+            for (int ballNumber = 0; ballNumber < _ballsNumber; ++ballNumber)
+            {
+                if (index == ballNumber)
+                {
+                    continue;
+                }
+                int comparedX = _ballsManager.GetBall(ballNumber).X;
+                int comparedY = _ballsManager.GetBall(ballNumber).Y;
+                int distance = (int)Math.Round(Math.Sqrt((ballX - comparedX) * (ballX - comparedX) + (ballY - comparedY) * (ballY - comparedY)));
+                if (distance <= 2 * _ballRadius)
+                {
+                    return ballNumber; // collision of two balls
+                }
+            }
+            return -1; // not found
+        }
+
         public void Start()
         {
             _isRunning = true;
@@ -199,5 +232,7 @@ namespace Logic
                 _tasks[i].Wait(); 
             }
         }
+
+        
     }
 }

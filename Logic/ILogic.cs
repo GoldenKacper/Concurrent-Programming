@@ -11,6 +11,10 @@ namespace Logic
         void Initialize(int width, int height, int ballsNumber, int ballsRadius = 25, int ballsWeight = 10, int ballsSpeed = 5);
         ILocation GetLocation(int index);
 
+        int GetDirectionValue(int index);
+        void SetDirectionValue(int i, int value);
+        int MockFindPotentialCollision(int index);
+
         void Start();
         void Stop();
     }
