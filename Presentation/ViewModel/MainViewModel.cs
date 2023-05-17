@@ -1,4 +1,5 @@
-﻿using Presentation.Commands;
+﻿using Data;
+using Presentation.Commands;
 using Presentation.Model;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,8 @@ namespace Presentation.ViewModel
         private int _tempBallRadius = 25;
         private Canvas _canvas;
         private IModel _model;
+        private ILog _log;
+        private DateTime _dateTime;
 
 
         //readonly int _radius = 25; // TODO draw from the range e.g. 15 - 40
@@ -31,10 +34,15 @@ namespace Presentation.ViewModel
         private DispatcherTimer timer = new DispatcherTimer(); // allows you to change some value at regular time intervals
         public event PropertyChangedEventHandler? PropertyChanged;
 
+        private DispatcherTimer logTimer = new DispatcherTimer();
 
-        public MainViewModel(IModel model)
+
+        public MainViewModel(IModel model, ILog log)
         {
             _model = model;
+            _log = log;
+
+            _log.ClearLog();
 
             BallsNumber = "0";
             BallsCounter = BallsNumber;
@@ -43,6 +51,11 @@ namespace Presentation.ViewModel
         }
 
         public ICommand GenerateBallsCommand { get; set; }
+
+        public DateTime DateTime
+        {
+            get => _dateTime; set => _dateTime = value;
+        }
 
         public void GenerateBalls(object obj)
         {
@@ -77,6 +90,7 @@ namespace Presentation.ViewModel
                 Canvas.SetTop(ball, _model.GetLocation(i).Y - _tempBallRadius);
             }
             MoveBall();
+            Logging();
         }
 
         public string BallsNumber
@@ -136,6 +150,20 @@ namespace Presentation.ViewModel
         public void StopBalls()
         {
             _model.StopLogic();
+        }
+
+        private void Logging()
+        {
+            logTimer.Tick += LogTimerEvent;
+            logTimer.Interval = TimeSpan.FromMilliseconds(5000);
+
+            logTimer.Start();
+        }
+
+        private void LogTimerEvent(object? sender, EventArgs e)
+        {
+            _dateTime = DateTime.Now;
+            _log.WriteLog(_dateTime);
         }
     }
 }

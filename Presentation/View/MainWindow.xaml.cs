@@ -29,6 +29,8 @@ namespace Presentation
         ILogic _logic;
         IModel _model;
 
+        ILog _log;
+
         public MainWindow()
         {
             //InitializeComponent();
@@ -37,8 +39,10 @@ namespace Presentation
             _logic = new Logic.Logic(_ballsManager);
             _model = new Model.Model(_logic);
 
+            _log = new Log(_ballsManager);
 
-            DataContext = new MainViewModel(_model);
+
+            DataContext = new MainViewModel(_model, _log);
         }
 
         private void Close_Window(object sender, RoutedEventArgs e)
