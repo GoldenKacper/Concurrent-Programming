@@ -131,7 +131,7 @@ namespace Presentation.ViewModel
         private void MoveBall()
         {
             timer.Tick += TimerEvent;
-            timer.Interval = TimeSpan.FromMilliseconds(1);
+            timer.Interval = TimeSpan.FromMilliseconds(20);
 
             timer.Start();
         }
